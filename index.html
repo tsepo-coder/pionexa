@@ -53,60 +53,61 @@
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 20px 16px 48px;
+      padding: 16px 12px 40px;
       position: relative;
       z-index: 2;
     }
-    .logo-area { text-align: center; margin-bottom: 20px; }
-    .logo-area img { max-width: 180px; height: auto; }
-    .header { text-align: center; margin: 12px 0 16px; }
-    .header h1 { font-size: 2.5rem; font-weight: 800; color: #115f6b; margin-bottom: 6px; }
-    .slogan { font-size: 1rem; font-weight: 500; color: #3a6f82; font-style: italic; }
-    .nav { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 20px 0 20px; }
-    .nav a { text-decoration: none; font-weight: 600; color: #1a6d7a; font-size: 0.95rem; padding-bottom: 4px; border-bottom: 2px solid transparent; }
+    .logo-area { text-align: center; margin-bottom: 16px; }
+    .logo-area img { max-width: 160px; height: auto; }
+    .header { text-align: center; margin: 8px 0 12px; }
+    .header h1 { font-size: 2.2rem; font-weight: 800; color: #115f6b; margin-bottom: 4px; }
+    .slogan { font-size: 0.9rem; font-weight: 500; color: #3a6f82; font-style: italic; }
+    .nav { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin: 16px 0 16px; }
+    .nav a { text-decoration: none; font-weight: 600; color: #1a6d7a; font-size: 0.85rem; padding-bottom: 3px; border-bottom: 2px solid transparent; }
     .nav a:hover { border-bottom-color: #1a6d7a; }
-    .box { background: white; border-radius: 24px; padding: 20px 22px; margin-bottom: 24px; border: 1px solid #ddebf2; }
-    .section-title { font-size: 1.6rem; font-weight: 700; color: #115f6b; margin-bottom: 16px; }
+    .box { background: white; border-radius: 20px; padding: 16px 18px; margin-bottom: 20px; border: 1px solid #ddebf2; }
+    .section-title { font-size: 1.4rem; font-weight: 700; color: #115f6b; margin-bottom: 12px; }
     .product-table-wrapper { display: none; }
     .product-table-wrapper.show { display: block; animation: fadeSlideDown 0.4s ease; }
     @keyframes fadeSlideDown { from { opacity: 0; transform: translateY(-15px); } to { opacity: 1; transform: translateY(0); } }
-    .product-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.9rem; }
-    .product-table th, .product-table td { border: 1px solid #cfe0ea; padding: 10px 8px; text-align: left; }
+    .product-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.8rem; }
+    .product-table th, .product-table td { border: 1px solid #cfe0ea; padding: 8px 6px; text-align: left; }
     .product-table th { background: #eaf3f8; font-weight: 700; color: #115f6b; }
-    .btn-reveal { background: #1a6d7a; color: white; border: none; padding: 12px 24px; border-radius: 50px; font-weight: 700; font-size: 1rem; cursor: pointer; width: 100%; max-width: 260px; margin: 0 auto; display: block; }
-    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 20px 0; }
-    @media (min-width: 600px) { .product-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; } }
-    .product-card { background: white; border-radius: 20px; overflow: hidden; border: 1px solid #e2edf2; transition: 0.2s; }
-    .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 20px -10px rgba(0,0,0,0.08); }
-    .product-img { width: 100%; height: 160px; background: #eef3f7; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .btn-reveal { background: #1a6d7a; color: white; border: none; padding: 10px 20px; border-radius: 50px; font-weight: 700; font-size: 0.9rem; cursor: pointer; width: 100%; max-width: 240px; margin: 0 auto; display: block; }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin: 16px 0; }
+    @media (min-width: 600px) { .product-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; } }
+    .product-card { background: white; border-radius: 18px; overflow: hidden; border: 1px solid #e2edf2; transition: 0.2s; }
+    .product-card:hover { transform: translateY(-3px); box-shadow: 0 8px 16px -8px rgba(0,0,0,0.08); }
+    .product-img { width: 100%; aspect-ratio: 1 / 1; background: #eef3f7; display: flex; align-items: center; justify-content: center; overflow: hidden; }
     .product-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; animation: softPulse 3s infinite; }
     @keyframes softPulse { 0% { transform: scale(1); } 50% { transform: scale(1.02); } 100% { transform: scale(1); } }
     .product-card:hover .product-img img { animation: none; transform: scale(1.03); }
-    .product-info { padding: 14px 14px 18px; }
-    .product-name { font-size: 1.2rem; font-weight: 700; color: #1f5e72; }
-    .product-price { font-size: 1.4rem; font-weight: 800; color: #0f4b5c; margin: 6px 0; }
-    .btn-order { display: block; background: #1a6d7a; color: white; text-decoration: none; padding: 8px 12px; border-radius: 40px; font-weight: 600; font-size: 0.85rem; text-align: center; margin-top: 10px; }
-    .contact-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
-    .btn-wa, .btn-fb, .btn-call { display: inline-block; padding: 10px 18px; border-radius: 50px; font-weight: 700; font-size: 0.9rem; text-decoration: none; text-align: center; flex: 1; min-width: 100px; }
+    .product-info { padding: 10px 12px 14px; }
+    .product-name { font-size: 1rem; font-weight: 700; color: #1f5e72; }
+    .product-price { font-size: 1.2rem; font-weight: 800; color: #0f4b5c; margin: 4px 0; }
+    .btn-order { display: block; background: #1a6d7a; color: white; text-decoration: none; padding: 6px 10px; border-radius: 40px; font-weight: 600; font-size: 0.75rem; text-align: center; margin-top: 8px; }
+    .contact-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .btn-wa, .btn-fb, .btn-call { display: inline-block; padding: 8px 14px; border-radius: 50px; font-weight: 700; font-size: 0.85rem; text-decoration: none; text-align: center; flex: 1; min-width: 90px; }
     .btn-wa { background: #25A36F; color: white; }
     .btn-fb { background: #1877f2; color: white; }
     .btn-call { background: #1a6d7a; color: white; }
-    .payment-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; }
-    .btn-payment { background: #f0f5f9; border: 1.5px solid #c2d8e4; padding: 10px 16px; border-radius: 50px; font-weight: 700; font-size: 0.9rem; cursor: pointer; color: #115f6b; flex: 1; text-align: center; }
-    .number-display { background: #eff4f8; padding: 14px; border-radius: 20px; margin-top: 14px; text-align: center; font-size: 0.9rem; }
-    .repair-box { background: #eaf3f8; border-radius: 24px; padding: 20px; margin-bottom: 24px; }
-    .footer { text-align: center; margin-top: 32px; padding-top: 20px; border-top: 1px solid #cde0ea; font-size: 0.75rem; color: #5f7e92; }
-    /* phone optimizations */
+    .payment-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0; }
+    .btn-payment { background: #f0f5f9; border: 1.5px solid #c2d8e4; padding: 8px 12px; border-radius: 50px; font-weight: 700; font-size: 0.85rem; cursor: pointer; color: #115f6b; flex: 1; text-align: center; }
+    .number-display { background: #eff4f8; padding: 12px; border-radius: 18px; margin-top: 12px; text-align: center; font-size: 0.85rem; }
+    .repair-box { background: #eaf3f8; border-radius: 20px; padding: 16px; margin-bottom: 20px; }
+    .footer { text-align: center; margin-top: 24px; padding-top: 16px; border-top: 1px solid #cde0ea; font-size: 0.7rem; color: #5f7e92; }
+    /* extreme phone optimizations */
     @media (max-width: 550px) {
-      .container { padding: 12px; }
-      .header h1 { font-size: 2rem; }
-      .section-title { font-size: 1.4rem; }
-      .product-name { font-size: 1rem; }
-      .product-price { font-size: 1.2rem; }
-      .box { padding: 16px; }
-      .btn-order { padding: 8px; font-size: 0.8rem; }
-      .contact-buttons { flex-direction: column; gap: 10px; }
+      .container { padding: 12px 10px 32px; }
+      .header h1 { font-size: 1.8rem; }
+      .section-title { font-size: 1.3rem; }
+      .product-name { font-size: 0.9rem; }
+      .product-price { font-size: 1rem; }
+      .box { padding: 14px; }
+      .btn-order { padding: 6px; font-size: 0.7rem; }
+      .contact-buttons { flex-direction: column; gap: 8px; }
       .btn-wa, .btn-fb, .btn-call { width: 100%; }
+      .repair-box { padding: 14px; }
     }
   </style>
 </head>
@@ -123,17 +124,17 @@
   <div style="text-align:center;"><button class="btn-reveal" id="revealTableBtn">Show full price list →</button></div>
   <div id="productTableWrapper" class="product-table-wrapper"><div class="box"><div class="section-title">Complete price list</div><table class="product-table"><thead><tr><th>Product</th><th>Price range (M)</th></tr></thead><tbody><tr><td>Study table</td><td>M450 – M1200</td></tr><tr><td>Corner table</td><td>M250 – M450</td></tr><tr><td>TV stand</td><td>M800 – M1200</td></tr><tr><td>Wardrobe</td><td>M1900 – M3500</td></tr><tr><td>Kitchen table</td><td>M1500 – M2800</td></tr><tr><td>Shelves</td><td>M400 – M950</td></tr></tbody></table><a href="https://wa.me/26656410138?text=Hello%20Pionexa" class="btn-wa" style="display:inline-block; margin-top:12px;">Ask about other products</a></div></div>
   <div id="products"><div class="section-title">Our featured products</div><div class="product-grid">
-    <div class="product-card"><div class="product-img"><img src="tvmain.jpeg" alt="TV stand "></div><div class="product-info"><div class="product-name">TV stand </div><div class="product-price">M1200</div><a href="https://wa.me/26656410138?text=I%20need%20TV%20stand%20main" class="btn-order">Order with 50% deposit</a></div></div>
-    <div class="product-card"><div class="product-img"><img src="tvs1.jpeg" alt="TV stand "></div><div class="product-info"><div class="product-name">TV stand </div><div class="product-price">M800</div><a href="https://wa.me/26656410138?text=I%20need%20TV%20stand%201" class="btn-order">Order with 50% deposit</a></div></div>
-    <div class="product-card"><div class="product-img"><img src="tv2.jpeg" alt="TV stand "></div><div class="product-info"><div class="product-name">TV stand </div><div class="product-price">M1000</div><a href="https://wa.me/26656410138?text=I%20need%20TV%20stand%202" class="btn-order">Order with 50% deposit</a></div></div>
-    <div class="product-card"><div class="product-img"><img src="base.jpeg" alt="Kitchen base"></div><div class="product-info"><div class="product-name">Kitchen base </div><div class="product-price">M950</div><a href="https://wa.me/26656410138?text=I%20need%20kitchen%20base" class="btn-order">Order with 50% deposit</a></div></div>
-    <div class="product-card"><div class="product-img"><img src="metsi.jpeg" alt="Kitchen table"></div><div class="product-info"><div class="product-name">Kitchen table</div><div class="product-price">M650</div><a href="https://wa.me/26656410138?text=I%20need%20metsi%20table" class="btn-order">Order with 50% deposit</a></div></div>
+    <div class="product-card"><div class="product-img"><img src="tvmain.jpeg" alt="TV stand"></div><div class="product-info"><div class="product-name">TV stand</div><div class="product-price">M1200</div><a href="https://wa.me/26656410138?text=I%20need%20TV%20stand" class="btn-order">Order with 50% deposit</a></div></div>
+    <div class="product-card"><div class="product-img"><img src="tvs1.jpeg" alt="TV stand"></div><div class="product-info"><div class="product-name">TV stand</div><div class="product-price">M800</div><a href="https://wa.me/26656410138?text=I%20need%20TV%20stand" class="btn-order">Order with 50% deposit</a></div></div>
+    <div class="product-card"><div class="product-img"><img src="tv2.jpeg" alt="TV stand"></div><div class="product-info"><div class="product-name">TV stand</div><div class="product-price">M1000</div><a href="https://wa.me/26656410138?text=I%20need%20TV%20stand" class="btn-order">Order with 50% deposit</a></div></div>
+    <div class="product-card"><div class="product-img"><img src="base.jpeg" alt="Kitchen base"></div><div class="product-info"><div class="product-name">Kitchen base</div><div class="product-price">M950</div><a href="https://wa.me/26656410138?text=I%20need%20kitchen%20base" class="btn-order">Order with 50% deposit</a></div></div>
+    <div class="product-card"><div class="product-img"><img src="metsi.jpeg" alt="Kitchen table"></div><div class="product-info"><div class="product-name">Kitchen table</div><div class="product-price">M650</div><a href="https://wa.me/26656410138?text=I%20need%20kitchen%20table" class="btn-order">Order with 50% deposit</a></div></div>
     <div class="product-card"><div class="product-img"><img src="corner.jpeg" alt="Corner table"></div><div class="product-info"><div class="product-name">Corner table</div><div class="product-price">M250</div><a href="https://wa.me/26656410138?text=I%20need%20corner%20table" class="btn-order">Order with 50% deposit</a></div></div>
   </div></div>
-  <div id="repair" class="repair-box"><div style="font-weight:800; font-size:1.3rem;">Furniture repair service</div><p>We repair tables, chairs, wardrobes, cabinets. Send photos for free estimate.</p><a href="https://wa.me/26656410138?text=I%20need%20repair" class="btn-wa" style="display:inline-block;">Request repair quote</a></div>
-  <div id="howto" class="box"><div class="section-title">How to order</div><div style="display:flex; flex-wrap:wrap; gap:12px; margin:16px 0;"><div style="flex:1; background:#fafdff; padding:12px; border-radius:18px;"><strong>1</strong><br>Contact us on WhatsApp</div><div style="flex:1; background:#fafdff; padding:12px; border-radius:18px;"><strong>2</strong><br>Pay 50% deposit (M-Pesa / EcoCash)</div><div style="flex:1; background:#fafdff; padding:12px; border-radius:18px;"><strong>3</strong><br>We build your piece (5-9 days)</div><div style="flex:1; background:#fafdff; padding:12px; border-radius:18px;"><strong>4</strong><br>Pay remaining 50% → pickup or delivery</div></div><div style="background:#eef4f9; border-radius:20px; padding:14px;"><p><strong>Delivery note:</strong> Pionexa does not deliver directly. For Maseru local → M130 fee to transporter. Free pickup.</p></div></div>
-  <div class="box"><div style="font-weight:700; font-size:1.2rem;">Make a deposit (50%)</div><p>Click to see payment number. Send deposit, then WhatsApp confirmation.</p><div class="payment-buttons"><button class="btn-payment" id="mpesaBtn">M-Pesa</button><button class="btn-payment" id="ecocashBtn">EcoCash</button></div><div id="paymentNumberDisplay" class="number-display">Click M-Pesa or EcoCash</div></div>
-  <div id="contact" class="box"><div class="section-title">Location & contact</div><div><strong>Workshop location:</strong> Maseru, Ha-mabote (Phopholetsa)</div><div><strong>WhatsApp / Call:</strong> <a href="tel:+26656410138">+266 56410138</a></div><div><strong>Hours:</strong> Mon-Sat 9am-5pm</div><div><strong>Payment:</strong> M-Pesa and EcoCash only (50% deposit)</div>
+  <div id="repair" class="repair-box"><div style="font-weight:800; font-size:1.2rem;">Furniture repair service</div><p>We repair tables, chairs, wardrobes, cabinets. Send photos for free estimate.</p><a href="https://wa.me/26656410138?text=I%20need%20repair" class="btn-wa" style="display:inline-block;">Request repair quote</a></div>
+  <div id="howto" class="box"><div class="section-title">How to order</div><div style="display:flex; flex-wrap:wrap; gap:10px; margin:12px 0;"><div style="flex:1; background:#fafdff; padding:10px; border-radius:16px;"><strong>1</strong><br>Contact us on WhatsApp</div><div style="flex:1; background:#fafdff; padding:10px; border-radius:16px;"><strong>2</strong><br>Pay 50% deposit (M-Pesa / EcoCash)</div><div style="flex:1; background:#fafdff; padding:10px; border-radius:16px;"><strong>3</strong><br>We build your piece (5-9 days)</div><div style="flex:1; background:#fafdff; padding:10px; border-radius:16px;"><strong>4</strong><br>Pay remaining 50% → pickup or delivery</div></div><div style="background:#eef4f9; border-radius:18px; padding:12px;"><p><strong>Delivery note:</strong> Pionexa does not deliver directly. For Maseru local → M130 fee to transporter. Free pickup.</p></div></div>
+  <div class="box"><div style="font-weight:700; font-size:1.1rem;">Make a deposit (50%)</div><p>Click to see payment number. Send deposit, then WhatsApp confirmation.</p><div class="payment-buttons"><button class="btn-payment" id="mpesaBtn">M-Pesa</button><button class="btn-payment" id="ecocashBtn">EcoCash</button></div><div id="paymentNumberDisplay" class="number-display">Click M-Pesa or EcoCash</div></div>
+  <div id="contact" class="box"><div class="section-title">Location & contact</div><div><strong>Workshop location:</strong> Maseru, Ha-mabote (Phopholetsa)</div><div><strong>Hours:</strong> Mon-Sat 9am-5pm</div><div><strong>Payment:</strong> M-Pesa and EcoCash only (50% deposit)</div>
     <div class="contact-buttons">
       <a href="https://wa.me/26656410138?text=Hello" class="btn-wa">WhatsApp</a>
       <a href="tel:+26656410138" class="btn-call">Call us</a>
@@ -143,7 +144,7 @@
   <div class="footer"><p>Pionexa — Rooted in reality. Designed for infinity.</p><p>Handmade melamine furniture & repairs in Maseru, Ha-mabote (Phopholetsa)</p><p>50% deposit policy · No direct delivery · M130 local Maseru delivery via partner</p></div>
 </div>
 <!-- sticky WhatsApp button for convenience -->
-<a href="https://wa.me/26656410138?text=Hi" style="position:fixed; bottom:20px; right:20px; background:#25A36F; color:white; padding:10px 20px; border-radius:50px; text-decoration:none; font-weight:700; font-size:0.85rem; box-shadow:0 2px 10px rgba(0,0,0,0.1); z-index:1000;">WhatsApp us</a>
+<a href="https://wa.me/26656410138?text=Hi" style="position:fixed; bottom:16px; right:16px; background:#25A36F; color:white; padding:8px 16px; border-radius:50px; text-decoration:none; font-weight:700; font-size:0.8rem; box-shadow:0 2px 8px rgba(0,0,0,0.1); z-index:1000;">WhatsApp us</a>
 <script>
   document.getElementById('revealTableBtn').addEventListener('click', function() {
     let wrapper = document.getElementById('productTableWrapper');
