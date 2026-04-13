@@ -1,21 +1,11 @@
 {
-  "outputDirectory": ".",
   "headers": [
     {
-      "source": ".*\\.(jpeg|jpg|png|gif|ico|css|js)$",
+      "source": "/(.*)\\.(jpeg|jpg|png|gif|ico|css|js)$",
       "headers": [
         {
           "key": "Cache-Control",
           "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": ".*",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
         }
       ]
     }
