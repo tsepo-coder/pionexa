@@ -49,7 +49,7 @@
     .container {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 16px 12px 90px;
+      padding: 16px 12px 80px;
       position: relative;
       z-index: 2;
     }
@@ -58,19 +58,19 @@
     .logo-area img { max-width: 190px; height: auto; }
     .header h1 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 2.55rem;
+      font-size: 2.4rem;
       font-weight: 700;
       color: var(--primary);
       margin: 12px 0 8px;
       line-height: 1.1;
     }
-    .slogan { font-size: 1.08rem; color: var(--accent); font-style: italic; font-weight: 500; }
+    .slogan { font-size: 1.05rem; color: var(--accent); font-style: italic; font-weight: 500; }
 
     .nav {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 14px;
+      gap: 12px;
       margin: 24px 0;
       background: rgba(255,255,255,0.9);
       padding: 10px;
@@ -81,8 +81,8 @@
       text-decoration: none;
       font-weight: 600;
       color: var(--accent);
-      font-size: 0.93rem;
-      padding: 8px 18px;
+      font-size: 0.92rem;
+      padding: 8px 16px;
       border-radius: 50px;
     }
     .nav a:hover { background: var(--accent); color: white; }
@@ -90,73 +90,25 @@
     .box {
       background: white;
       border-radius: 24px;
-      padding: 22px;
-      margin-bottom: 26px;
+      padding: 20px;
+      margin-bottom: 24px;
       box-shadow: 0 10px 25px -10px rgba(15,75,92,0.15);
       border: 1px solid #ddebf2;
     }
 
     .section-title {
-      font-size: 1.65rem;
+      font-size: 1.55rem;
       font-weight: 700;
       color: var(--primary);
       margin-bottom: 18px;
     }
 
-    /* Seamless Infinite Carousel */
-    .carousel-container {
-      position: relative;
-      overflow: hidden;
-      border-radius: 28px;
-      margin: 20px 0 34px;
-      box-shadow: 0 15px 35px -10px rgba(15,75,92,0.2);
-    }
-
-    .carousel-track {
-      display: flex;
-      gap: 20px;
-      width: max-content;
-      animation: scrollLeft 28s linear infinite;
-      padding: 12px 0;
-    }
-
-    .carousel-container:hover .carousel-track { animation-play-state: paused; }
-
-    @keyframes scrollLeft {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    .carousel-card {
-      width: 270px;
-      background: white;
-      border-radius: 22px;
-      overflow: hidden;
-      box-shadow: 0 10px 25px -8px rgba(0,0,0,0.12);
-      border: 1px solid #e2edf2;
-      flex-shrink: 0;
-    }
-
-    .carousel-image {
-      height: 210px;
-      overflow: hidden;
-    }
-
-    .carousel-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.7s ease;
-    }
-
-    .carousel-card:hover .carousel-image img { transform: scale(1.12); }
-
-    /* Static Grid */
+    /* Clean Product Grid - Optimized for Phones */
     .product-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
-      gap: 20px;
-      margin: 32px 0 30px;
+      gap: 18px;
+      margin: 28px 0 30px;
     }
 
     .product-card {
@@ -170,11 +122,12 @@
     }
 
     .product-card:hover {
-      transform: scale(1.05) translateY(-6px);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 35px -12px rgba(26,109,122,0.25);
     }
 
     .product-image {
-      height: 200px;
+      height: 195px;
       overflow: hidden;
       position: relative;
       cursor: pointer;
@@ -184,10 +137,12 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.7s ease;
+      transition: transform 0.6s ease;
     }
 
-    .product-card:hover .product-image img { transform: scale(1.12); }
+    .product-card:hover .product-image img {
+      transform: scale(1.08);
+    }
 
     .like-btn {
       position: absolute;
@@ -214,9 +169,23 @@
 
     @keyframes heartPop { 0% { transform: scale(1); } 50% { transform: scale(1.35); } 100% { transform: scale(1); } }
 
-    .product-info { padding: 16px; text-align: center; }
-    .product-name { font-weight: 700; color: var(--primary); margin-bottom: 6px; font-size: 1.05rem; }
-    .product-price { font-size: 1.45rem; font-weight: 800; color: var(--accent); }
+    .product-info {
+      padding: 16px;
+      text-align: center;
+    }
+
+    .product-name {
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+      font-size: 1.05rem;
+    }
+
+    .product-price {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
 
     .btn-order {
       display: block;
@@ -243,8 +212,8 @@
       cursor: pointer;
     }
 
-    /* Image Viewer & Modal */
-    .image-viewer, .modal {
+    /* Full Screen Image Viewer */
+    .image-viewer {
       display: none;
       position: fixed;
       top: 0; left: 0;
@@ -255,12 +224,11 @@
       justify-content: center;
     }
 
-    .modal { background: rgba(0,0,0,0.75); z-index: 21000; }
-
-    .viewer-content img, .modal-content {
+    .viewer-content img {
       max-width: 94%;
       max-height: 88vh;
       border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
     }
 
     .close-viewer {
@@ -270,6 +238,61 @@
       color: white;
       font-size: 38px;
       cursor: pointer;
+    }
+
+    /* Modern Comment Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.75);
+      z-index: 21000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-content {
+      background: white;
+      max-width: 440px;
+      width: 100%;
+      border-radius: 28px;
+      padding: 28px 26px;
+      box-shadow: 0 25px 50px -12px rgba(15,75,92,0.35);
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .modal-header h3 {
+      color: var(--primary);
+      font-size: 1.4rem;
+    }
+
+    .modal-content textarea {
+      width: 100%;
+      min-height: 160px;
+      padding: 16px;
+      border: 2px solid #e2f0f7;
+      border-radius: 18px;
+      font-size: 1.05rem;
+      resize: none;
+    }
+
+    .modal-content button {
+      width: 100%;
+      margin-top: 18px;
+      background: linear-gradient(90deg, var(--accent), #3a9ab0);
+      color: white;
+      padding: 16px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.05rem;
     }
 
     .toast {
@@ -283,7 +306,6 @@
       border-radius: 50px;
       display: none;
       z-index: 22000;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     }
 
     .btn-reveal {
@@ -297,7 +319,6 @@
       max-width: 280px;
       margin: 0 auto;
       display: block;
-      font-size: 1.05rem;
     }
 
     .payment-buttons { display: flex; gap: 14px; margin: 18px 0; }
@@ -329,7 +350,6 @@
       font-weight: 700;
       text-align: center;
       text-decoration: none;
-      min-width: 110px;
     }
     .btn-wa { background: #25D366; color: white; }
     .btn-fb { background: #1877F2; color: white; }
@@ -342,7 +362,6 @@
       border-top: 1px solid #cde0ea;
       font-size: 0.82rem;
       color: #5f7e92;
-      line-height: 1.5;
     }
 
     .sticky-wa {
@@ -360,9 +379,9 @@
     }
 
     @media (max-width: 560px) {
-      .header h1 { font-size: 2.15rem; }
-      .carousel-card, .product-card { width: 225px; }
-      .carousel-image, .product-image { height: 185px; }
+      .header h1 { font-size: 2.1rem; }
+      .product-card { width: 100%; }
+      .product-image { height: 190px; }
       .section-title { font-size: 1.5rem; }
     }
   </style>
@@ -399,7 +418,6 @@
       <button class="btn-reveal" id="revealTableBtn">Show full price list →</button>
     </div>
 
-    <!-- Price List -->
     <div id="productTableWrapper" style="display:none;">
       <div class="box">
         <div class="section-title">Complete price list</div>
@@ -419,72 +437,92 @@
       </div>
     </div>
 
-    <!-- Carousel -->
+    <!-- All Products Grid -->
     <div id="products">
-      <div class="section-title">Featured Pieces</div>
-      <div class="carousel-container">
-        <div class="carousel-track" id="carouselTrack">
-          <!-- Original + new images -->
-          <div class="carousel-card"><div class="carousel-image"><img src="tvs1.jpeg" alt="TV Stand"></div><div class="product-info"><div class="product-name">TV Stand</div><div class="product-price">M800</div><a href="https://wa.me/26656410138?text=I%20need%20TV%20stand%201" class="btn-order">Order with 50% deposit</a></div></div>
-          <div class="carousel-card"><div class="carousel-image"><img src="dr.jpeg" alt="Dressing Table"></div><div class="product-info"><div class="product-name">Dressing Table</div><div class="product-price">M1300</div><a href="https://wa.me/26656410138?text=I%20need%20dressing%20table" class="btn-order">Order with 50% deposit</a></div></div>
-          <div class="carousel-card"><div class="carousel-image"><img src="base1.jpeg" alt="Kitchen Base"></div><div class="product-info"><div class="product-name">Kitchen Base</div><div class="product-price">M1500</div><a href="https://wa.me/26656410138?text=I%20need%20kitchen%20base" class="btn-order">Order with 50% deposit</a></div></div>
-          <div class="carousel-card"><div class="carousel-image"><img src="w.png" alt="Wardrobe"></div><div class="product-info"><div class="product-name">Wardrobe</div><div class="product-price">M3500</div><a href="https://wa.me/26656410138?text=I%20need%20wardrobe" class="btn-order">Order with 50% deposit</a></div></div>
-          <div class="carousel-card"><div class="carousel-image"><img src="sl.png" alt="Chest of Drawers"></div><div class="product-info"><div class="product-name">Chest of Drawers</div><div class="product-price">M1500</div><a href="https://wa.me/26656410138?text=I%20need%20chest%20of%20drawers" class="btn-order">Order with 50% deposit</a></div></div>
-          <div class="carousel-card"><div class="carousel-image"><img src="base2.jpeg" alt="Kitchen Base"></div><div class="product-info"><div class="product-name">Kitchen Base</div><div class="product-price">M1500</div><a href="https://wa.me/26656410138?text=I%20need%20kitchen%20base" class="btn-order">Order with 50% deposit</a></div></div>
+      <div class="section-title">Our Products</div>
+      <div class="product-grid">
+        <div class="product-card" data-product="TV Stand" data-image="tvs1.jpeg">
+          <div class="product-image" onclick="openImageViewer(this)"><img src="tvs1.jpeg" alt="TV Stand"><div class="like-btn" onclick="event.stopImmediatePropagation(); toggleLike(this)">🤍</div></div>
+          <div class="product-info">
+            <div class="product-name">TV Stand</div>
+            <div class="product-price">M800</div>
+            <a href="https://wa.me/26656410138?text=I%20need%20TV%20stand%201" class="btn-order">Order with 50% deposit</a>
+            <button class="comment-btn" onclick="event.stopImmediatePropagation(); openCommentModal(this)">💬 Leave a comment</button>
+          </div>
+        </div>
 
-          <!-- Duplicates for perfect seamless loop -->
-          <div class="carousel-card"><div class="carousel-image"><img src="tvs1.jpeg" alt="TV Stand"></div><div class="product-info"><div class="product-name">TV Stand</div><div class="product-price">M800</div><a href="https://wa.me/26656410138?text=I%20need%20TV%20stand%201" class="btn-order">Order with 50% deposit</a></div></div>
-          <div class="carousel-card"><div class="carousel-image"><img src="dr.jpeg" alt="Dressing Table"></div><div class="product-info"><div class="product-name">Dressing Table</div><div class="product-price">M1300</div><a href="https://wa.me/26656410138?text=I%20need%20dressing%20table" class="btn-order">Order with 50% deposit</a></div></div>
-          <div class="carousel-card"><div class="carousel-image"><img src="base1.jpeg" alt="Kitchen Base"></div><div class="product-info"><div class="product-name">Kitchen Base</div><div class="product-price">M1500</div><a href="https://wa.me/26656410138?text=I%20need%20kitchen%20base" class="btn-order">Order with 50% deposit</a></div></div>
+        <div class="product-card" data-product="Dressing Table" data-image="dr.jpeg">
+          <div class="product-image" onclick="openImageViewer(this)"><img src="dr.jpeg" alt="Dressing Table"><div class="like-btn" onclick="event.stopImmediatePropagation(); toggleLike(this)">🤍</div></div>
+          <div class="product-info">
+            <div class="product-name">Dressing Table</div>
+            <div class="product-price">M1300</div>
+            <a href="https://wa.me/26656410138?text=I%20need%20dressing%20table" class="btn-order">Order with 50% deposit</a>
+            <button class="comment-btn" onclick="event.stopImmediatePropagation(); openCommentModal(this)">💬 Leave a comment</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-product="Kitchen Base" data-image="base1.jpeg">
+          <div class="product-image" onclick="openImageViewer(this)"><img src="base1.jpeg" alt="Kitchen Base"><div class="like-btn" onclick="event.stopImmediatePropagation(); toggleLike(this)">🤍</div></div>
+          <div class="product-info">
+            <div class="product-name">Kitchen Base</div>
+            <div class="product-price">M1500</div>
+            <a href="https://wa.me/26656410138?text=I%20need%20kitchen%20base" class="btn-order">Order with 50% deposit</a>
+            <button class="comment-btn" onclick="event.stopImmediatePropagation(); openCommentModal(this)">💬 Leave a comment</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-product="Wardrobe" data-image="w.png">
+          <div class="product-image" onclick="openImageViewer(this)"><img src="w.png" alt="Wardrobe"><div class="like-btn" onclick="event.stopImmediatePropagation(); toggleLike(this)">🤍</div></div>
+          <div class="product-info">
+            <div class="product-name">Wardrobe</div>
+            <div class="product-price">M3500</div>
+            <a href="https://wa.me/26656410138?text=I%20need%20wardrobe" class="btn-order">Order with 50% deposit</a>
+            <button class="comment-btn" onclick="event.stopImmediatePropagation(); openCommentModal(this)">💬 Leave a comment</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-product="Chest of Drawers" data-image="sl.png">
+          <div class="product-image" onclick="openImageViewer(this)"><img src="sl.png" alt="Chest of Drawers"><div class="like-btn" onclick="event.stopImmediatePropagation(); toggleLike(this)">🤍</div></div>
+          <div class="product-info">
+            <div class="product-name">Chest of Drawers</div>
+            <div class="product-price">M1500</div>
+            <a href="https://wa.me/26656410138?text=I%20need%20chest%20of%20drawers" class="btn-order">Order with 50% deposit</a>
+            <button class="comment-btn" onclick="event.stopImmediatePropagation(); openCommentModal(this)">💬 Leave a comment</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-product="Kitchen Base 2" data-image="base2.jpeg">
+          <div class="product-image" onclick="openImageViewer(this)"><img src="base2.jpeg" alt="Kitchen Base"><div class="like-btn" onclick="event.stopImmediatePropagation(); toggleLike(this)">🤍</div></div>
+          <div class="product-info">
+            <div class="product-name">Kitchen Base</div>
+            <div class="product-price">M1500</div>
+            <a href="https://wa.me/26656410138?text=I%20need%20kitchen%20base" class="btn-order">Order with 50% deposit</a>
+            <button class="comment-btn" onclick="event.stopImmediatePropagation(); openCommentModal(this)">💬 Leave a comment</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-product="Kitchen Table" data-image="metsi.jpeg">
+          <div class="product-image" onclick="openImageViewer(this)"><img src="metsi.jpeg" alt="Kitchen Table"><div class="like-btn" onclick="event.stopImmediatePropagation(); toggleLike(this)">🤍</div></div>
+          <div class="product-info">
+            <div class="product-name">Kitchen Table</div>
+            <div class="product-price">M650</div>
+            <a href="https://wa.me/26656410138?text=I%20need%20metsi%20table" class="btn-order">Order with 50% deposit</a>
+            <button class="comment-btn" onclick="event.stopImmediatePropagation(); openCommentModal(this)">💬 Leave a comment</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-product="Corner Table" data-image="corner.jpeg">
+          <div class="product-image" onclick="openImageViewer(this)"><img src="corner.jpeg" alt="Corner Table"><div class="like-btn" onclick="event.stopImmediatePropagation(); toggleLike(this)">🤍</div></div>
+          <div class="product-info">
+            <div class="product-name">Corner Table</div>
+            <div class="product-price">M250</div>
+            <a href="https://wa.me/26656410138?text=I%20need%20corner%20table" class="btn-order">Order with 50% deposit</a>
+            <button class="comment-btn" onclick="event.stopImmediatePropagation(); openCommentModal(this)">💬 Leave a comment</button>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- More Beautiful Pieces -->
-    <div class="section-title">More Beautiful Pieces</div>
-    <div class="product-grid">
-      <div class="product-card" data-product="Kitchen Table" data-image="metsi.jpeg">
-        <div class="product-image" onclick="openImageViewer(this)"><img src="metsi.jpeg" alt="Kitchen Table"><div class="like-btn" onclick="event.stopImmediatePropagation(); toggleLike(this)">🤍</div></div>
-        <div class="product-info">
-          <div class="product-name">Kitchen Table</div>
-          <div class="product-price">M650</div>
-          <a href="https://wa.me/26656410138?text=I%20need%20metsi%20table" class="btn-order">Order with 50% deposit</a>
-          <button class="comment-btn" onclick="event.stopImmediatePropagation(); openCommentModal(this)">💬 Leave a comment</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-product="Corner Table" data-image="corner.jpeg">
-        <div class="product-image" onclick="openImageViewer(this)"><img src="corner.jpeg" alt="Corner Table"><div class="like-btn" onclick="event.stopImmediatePropagation(); toggleLike(this)">🤍</div></div>
-        <div class="product-info">
-          <div class="product-name">Corner Table</div>
-          <div class="product-price">M250</div>
-          <a href="https://wa.me/26656410138?text=I%20need%20corner%20table" class="btn-order">Order with 50% deposit</a>
-          <button class="comment-btn" onclick="event.stopImmediatePropagation(); openCommentModal(this)">💬 Leave a comment</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-product="Dressing Table" data-image="dr.jpeg">
-        <div class="product-image" onclick="openImageViewer(this)"><img src="dr.jpeg" alt="Dressing Table"><div class="like-btn" onclick="event.stopImmediatePropagation(); toggleLike(this)">🤍</div></div>
-        <div class="product-info">
-          <div class="product-name">Dressing Table</div>
-          <div class="product-price">M1300</div>
-          <a href="https://wa.me/26656410138?text=I%20need%20dressing%20table" class="btn-order">Order with 50% deposit</a>
-          <button class="comment-btn" onclick="event.stopImmediatePropagation(); openCommentModal(this)">💬 Leave a comment</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-product="Wardrobe" data-image="w.png">
-        <div class="product-image" onclick="openImageViewer(this)"><img src="w.png" alt="Wardrobe"><div class="like-btn" onclick="event.stopImmediatePropagation(); toggleLike(this)">🤍</div></div>
-        <div class="product-info">
-          <div class="product-name">Wardrobe</div>
-          <div class="product-price">M3500</div>
-          <a href="https://wa.me/26656410138?text=I%20need%20wardrobe" class="btn-order">Order with 50% deposit</a>
-          <button class="comment-btn" onclick="event.stopImmediatePropagation(); openCommentModal(this)">💬 Leave a comment</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Other sections remain the same -->
     <div id="repair" class="repair-box">
       <div style="font-weight:800; font-size:1.3rem;">Furniture repair service</div>
       <p>We repair tables, chairs, wardrobes, cabinets. Send photos for free estimate.</p>
@@ -607,7 +645,7 @@
       setTimeout(() => toast.style.display = 'none', 2400);
     }
 
-    // Price list
+    // Price list toggle
     document.getElementById('revealTableBtn').addEventListener('click', function() {
       const wrapper = document.getElementById('productTableWrapper');
       wrapper.style.display = wrapper.style.display === 'none' ? 'block' : 'none';
